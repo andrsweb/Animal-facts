@@ -1,11 +1,11 @@
-import { useState } from 'react'
 import './App.scss'
+import Header from './components/Header/Header'
 
 const App = () => {
-	const [count, setCount] = useState( 0 )
 
 	return (
 		<div className="Wrapper">
+			<Header text="Animals facts" />
 			<main>
 			</main>
 		</div>

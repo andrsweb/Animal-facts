@@ -1,0 +1,37 @@
+@import '../../common/vars';
+
+.header {
+	padding: 20px 0;
+	background-color: $accent;
+	box-shadow: 0 0 3px 10px $accent;
+
+	&-wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		@media all and (min-width: $lg) {
+			flex-direction: row;
+		}
+	}
+
+	&-logo {
+		margin-top: 20px;
+
+		@media all and (min-width: $lg) {
+			margin-top: 0;
+			margin-left: 10%;
+		}
+	}
+
+	&-text {
+		font-size: 25px;
+		font-weight: $fw-bold;
+		text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.534);
+
+		@media all and (min-width: $lg) {
+			font-size: 50px
+		}
+	}
+}

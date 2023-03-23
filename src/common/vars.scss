@@ -12,7 +12,7 @@ $container-lg: 990px;
 $container-xl: 1200px;
 
 // Container padding.
-$container-padding: 0 20px;
+$container-padding: 20px;
 
 // Font families.
 $ff	: 'Roboto', sans-serif;
@@ -25,7 +25,7 @@ $fs-lg	: 18px;
 $fs-xl	: 20px;
 
 // Font weights.
-$fw-light	: 300;
+$fw-thin	: 100;
 $fw-regular	: 400;
 $fw-medium	: 500;
 $fw-semibold: 600;
@@ -38,6 +38,9 @@ $lh-title	: 1.3;
 // Colors.
 $white	 : #FFFFFF;
 $black	 : #000000;
+$accent	 : #FDEEDC;
+$hero    : #FFD8A9;
+$footer  : #E38B29;
 
 // Others.
 $tr: 0.35s;
