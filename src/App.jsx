@@ -3,10 +3,9 @@ import Header from './components/Header/Header'
 import Hero from './components/hero/Hero'
 
 const App = () => {
-
 	return (
 		<div className="Wrapper">
-			<Header text="Animals facts" />
+			<Header text="Cats & Dogs" />
 			<main>
 				<Hero />
 			</main>
