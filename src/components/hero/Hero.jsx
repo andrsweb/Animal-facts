@@ -7,17 +7,25 @@ const Hero = () => {
 	const [ dogImage, setDogImage ] = useState( 'about:blank' )
 	const [ catImage, setCatImage ] = useState( 'about:blank' )
 
-		useEffect( () => {
-			fetch( 'https://dog.ceo/api/breeds/image/random' )
-			.then( ( response ) => response.json() )
-			.then( ( json ) => setDogImage( json.message ) )
-		}, [] )
+	const renderDog = () => {
+		fetch( 'https://dog.ceo/api/breeds/image/random' )
+		.then( ( res ) => res.json() )
+		.then( ( json ) => setDogImage( json.message ) )
+	}
 
-		useEffect( () => {
-			fetch( 'http://aws.random.cat/meow' )
-			.then( ( response ) => response.json() )
-			.then( ( json ) => setCatImage( json.file ) )
-		}, [] )
+	const renderCat = () => {
+		fetch( 'http://aws.random.cat/meow' )
+		.then( ( response ) => response.json() )
+		.then( ( json ) => setCatImage( json.file ) )
+	}
+
+	useEffect( () => {
+		renderDog()
+	}, [] )
+
+	useEffect( () => {
+		renderCat()
+	}, [] )
 
 	return(
 		<section className="hero">
@@ -57,7 +65,7 @@ const Hero = () => {
 							<img src={ dogImage } alt="" />
 						</div>
 						<div className="button-wrapper-new">
-							<button className='generate-dog'>
+							<button onClick={ renderDog } className='generate-dog'>
 								Generate dog
 							</button>
 						</div>
@@ -67,7 +75,7 @@ const Hero = () => {
 							<img src={ catImage } alt="" width="300" height="300" />
 						</div>
 						<div className="button-wrapper-new">
-							<button className='generate-dog'>
+							<button onClick={ renderCat } className='generate-dog'>
 								Generate cat
 							</button>
 						</div>
