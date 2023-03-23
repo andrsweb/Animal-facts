@@ -3,6 +3,7 @@
 .hero {
 	padding: 30px 0;
 	background-color: $hero;
+	height: 750px;
 	
 	&-wrapper {
 		width: 100%;
@@ -10,6 +11,14 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+
+		&.hide {
+			height: 0;
+			opacity: 0;
+			overflow: hidden;
+			transition: height ease 1s,
+						opacity ease 1s;
+		}
 	}
 
 	&-dog, &-cat {
@@ -26,6 +35,14 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	transition: opacity ease 1s $tr,
+				height ease 1s $tr;
+
+	&.hide {
+		opacity: 0;
+		height: 0;
+		overflow: hidden;
+	}
 }
 
 .get-fact {
